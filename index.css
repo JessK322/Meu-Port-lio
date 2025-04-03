@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    background: linear-gradient(45deg, #ff7378, #e79191, rgb(102, 108, 192), #415fe7);
+    background-size: 400% 400%;
+    animation: gradientMove 10s infinite alternate;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.image-box {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.image-box img {
+    width: 100%;
+    transition: transform 0.3s ease-out;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+h2 {
+    margin: 5px 0 0;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.social-links {
+    display: flex;
+    gap: 60px; /* Adiciona um espaçamento de 50px entre os ícones */
+}
+
+.social-links a {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-links a img {
+    width: 56px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box {
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    animation: float 3s infinite ease-in-out alternate;
+}
+
+.floating-image {
+    margin-top: 70px;
+    width: 150px;
+    height: 150px; /* Corrigido aqui para um valor válido */
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.floating-image:hover {
+    transform: scale(1.05);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(10px); }
+}
+/* Novos quadrados abaixo do portfólio */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.gallery-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-box:hover {
+    transform: scale(1.05);
+}
+
+/* Quadrado de título e descrição */
+.overlay {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 80%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Mostrar apenas no hover */
+.gallery-box:hover .overlay {
+    transform: translate(-50%, -50%) scale(1);
+}

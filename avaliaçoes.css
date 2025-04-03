@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #111, #333);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.container {
+    position: relative;
+}
+h1 {
+    font-size: 3rem;
+}
+.back-button {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
